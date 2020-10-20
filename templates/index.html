@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Pandemic Cases Predictor</title>
+        <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" type='text/css'>
+        <link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet" type='text/css'>
+        <link href="https://fonts.googleapis.com/css?family=Hind:300" rel="stylesheet" type='text/css'>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet" type='text/css'>
+
+
+    </head>
+
+    <body>
+        <div class="login">
+            <h1>Predict Cases</h1>
+            <form action="{{url_for('predict')}}" method ='post'>
+                <input type="text" name="New Cases" placeholder="Enter New Cases per day" required="required"/>
+                <input type="text" name="New Cases Smoothed" placeholder="Enter New Cases smoothed per day" required="required"/>
+                <input type="text" name="Total Deaths" placeholder="Enter Total No.of deaths per day" required="required"/>
+                <input type="text" name="New Deaths" placeholder="Enter New Deaths per day" required="required"/>
+                <input type="text" name="New Deaths smoothed" placeholder="Enter New deaths smoothed per day" required="required"/>
+                <input type="text" name="Total cases per million" placeholder="Enter Total cases per million per day" required="required"/>
+                <input type="text" name="New Cases per million" placeholder="Enter New Cases per million per day" required="required"/>
+                <input type="text" name="New Cases smoothed per million" placeholder="Enter New Cases smoothed per million per day" required="required"/>
+                <input type="text" name="Total deaths per million" placeholder="Enter total deaths per million per day" required="required"/>
+                <input type="text" name="New deaths per million" placeholder="Enter New deaths per million" required="required"/>
+                <input type="text" name="New deaths smoothed per million" placeholder="Enter New deaths smoothed per million per day" required="required"/>
+                <input type="text" name="New tests" placeholder="Enter New tests per day" required="required"/>
+                <input type="text" name="Total tests" placeholder="Enter total tests per day" required="required"/>
+                <input type="text" name="Total tests per thousand" placeholder="Enter total tests per thousand per day" required="required"/>
+                <input type="text" name="New tests per thousand" placeholder="Enter New tests per thousand per day" required="required"/>
+                <input type="text" name="New tests smoothed" placeholder="Enter New tests smoothed per day" required="required"/>
+                <input type="text" name="New tests smoothed per thousand" placeholder="Enter New tests smoothed per thousand per day" required="required"/>
+                <input type="text" name="Tests per case" placeholder="Tests per case per day" required="required"/>
+                <input type="text" name="Stringency Index" placeholder="Stringency index" required="required"/>
+                <input type="text" name="Population" placeholder="Population" required="required"/>
+                <input type="text" name="Population Density" placeholder="Population density" required="required"/>
+                <input type="text" name="Count of 65 year older" placeholder="Above 65 aged" required="required"/>
+                <input type="text" name="Count of 70 year older" placeholder="Above 70 aged" required="required"/>
+                <input type="text" name="GDP" placeholder="GDP per capita" required="required"/>
+                <input type="text" name="Poverty rate" placeholder="Enter Poverty rate" required="required"/>
+                <input type="text" name="Count of Cardio Vascular death rate" placeholder="Cardio vascular death rate" required="required"/>
+                <input type="text" name="Diabetes prevalence" placeholder="Diabetes prevalence" required="required"/>
+                <input type="text" name="Count of Female Smokers" placeholder="Female smokers" required="required"/>
+                <input type="text" name="Count of Male Smokers" placeholder="Male Smokers" required="required"/>
+                <input type="text" name="Count of Handwash Facilites" placeholder="handwashing facilites" required="required"/>
+                <input type="text" name="Human Dev Index" placeholder="HDI" required="required"/>
+                
+                
+                <button type="submit" class="btn btn-primary btn-block btn-large">Score</button>
+
+
+            </form>
+            <br>
+            <br>
+            {{ prediction_text }}
+        </div>
+    </body>
+</html>    
