@@ -1,0 +1,9 @@
+version: "3.8"
+services:
+  flsk:
+    image: docker-app:3.0
+    container_name: regor
+    ports:
+      - "0.0.0.0:7000:7000"
+    working_dir: /home/ranji/FlaskApp/
+    command: bash -c "python ./home/ranji/FlaskApp/app.py"
