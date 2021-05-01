@@ -4,4 +4,4 @@ RUN mkdir -p /home/regorapp
 
 COPY . /home/regorapp
 
-CMD ["python", "app.py"]
+CMD ["python", "regorapp.py"]
